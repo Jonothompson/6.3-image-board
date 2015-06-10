@@ -1,10 +1,10 @@
 var User = Backbone.Model.extend({
-	defaults:{
+	defaults: {
 		name: ''
 	}
 });
 
-var UserCollection = Backbone.Colletion.extend({
+var UserCollection = Backbone.Collection.extend({
 	model: User
 });
 
