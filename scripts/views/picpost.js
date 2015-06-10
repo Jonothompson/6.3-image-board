@@ -11,5 +11,17 @@ export default Backbone.View.extend({
 		this.listenTo(this.collection, 'update', this.render);
 	},
 	
+	render: function(){
+		this.$el.html(this.template(this.collection.toJSON()));	
+	},
+	
+	createPost: function(e) {
+		e.preventDefault();
+		var content = this.$('.create-post-form').val();
+		this.collection.create({
+			content: content,
+			username: this.username
+		});
+	}
 	
 });
