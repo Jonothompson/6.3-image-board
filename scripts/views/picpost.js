@@ -1,5 +1,5 @@
 export default Backbone.View.extend({
-	template: JST.chat,
+	template: JST.picpost,
 	
 	events: {
 		'submit .create-post-form': 'createPost'
@@ -17,7 +17,7 @@ export default Backbone.View.extend({
 	
 	createPost: function(e) {
 		e.preventDefault();
-		var content = this.$('.create-post-form').val();
+		var content = this.$('.create-post-content').val();
 		this.collection.create({
 			content: content,
 			username: this.username

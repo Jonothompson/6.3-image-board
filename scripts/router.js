@@ -11,8 +11,8 @@ var Router = Backbone.Router.extend({
 	},
 	
 	initialize: function() {
-		this.User = new UserCollection();
-		this.listenTo(this.Users, 'add', function() {
+		this.user = new UserCollection();
+		this.listenTo(this.user, 'add', function() {
 			this.navigate('picpost', {trigger: true});
 		}.bind(this));
 		
@@ -27,7 +27,7 @@ var Router = Backbone.Router.extend({
 	picpost: function () {
 		var view = new PicpostView({
 			collection: this.pictures,
-			user: this.User.at(0)
+			user: this.user.at(0)
 		});
 		$('.appContainer').html(view.el);
 		this.pictures.fetch();

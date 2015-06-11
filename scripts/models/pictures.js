@@ -11,7 +11,7 @@ var Pictures = Backbone.Model.extend({
 
 var PicturesCollection = Backbone.Collection.extend({
 	model: Pictures,
-	url: 'http://tiny-lasagna-server.herokuapp.com/collections/pictures'
+	url: 'http://tiny-lasagna-server.herokuapp.com/collections/jtpictures'
 });
 
 export default {Pictures, PicturesCollection};
