@@ -8,6 +8,7 @@ var Router = Backbone.Router.extend({
 	routes: {
 		'': 'index',
 		'picpost': 'picpost'
+		'create': 'create'
 	},
 	
 	initialize: function() {
@@ -31,9 +32,11 @@ var Router = Backbone.Router.extend({
 		});
 		$('.appContainer').html(view.el);
 		this.pictures.fetch();
-	}
+	},
 	
-	
+	create: function(){
+		
+	},
 });
 
 var router = new Router();

@@ -1,5 +1,5 @@
 export default Backbone.View.extend({
-	template: JST.picpost,
+	template: JST.picboard,
 	
 	events: {
 		'submit .create-post-form': 'createPost'
